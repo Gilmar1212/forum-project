@@ -17,15 +17,9 @@
     }
    
     $validate = new Process_account();
-    $validate->throwsError($_POST['login'],$_POST['senha']);
+    $validate->throwsErrorCreation($_POST['login'],$_POST['senha']);
 
     $create = new createAccount();
     $create->Create($_POST['login'],$_POST['senha']);
-   
-    
-
-    
-        
-        
   
 ?>
