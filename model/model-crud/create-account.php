@@ -1,8 +1,7 @@
 <?php
- 
   
-   include_once("../controller/process-account.php");
-   include_once("connect-db.php");
+   include_once("../../controller/process-account.php");
+   include_once("../../connection/connect-db.php");
     class createAccount extends Connect_db{
         private $login;
         private $senha;
