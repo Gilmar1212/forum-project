@@ -4,9 +4,9 @@ session_start();
     class UpdateAccount extends Connect_db{
         Private $id;
         public function teste(){
-            $select = UpdateAccount::select("id_usuario","cadastro",true,158);
+            $select = UpdateAccount::select("*","cadastro",false,false);
             while($fetch = mysqli_fetch_assoc($select)){
-                echo $fetch['id_usuario'];
+                echo $fetch['login'];
             }
         }        
     }
