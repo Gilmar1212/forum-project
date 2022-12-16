@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="../model/model-crud/create-account.php" method="POST" enctype="multipart/form-data">
+    <form action="../model/model-crud-account/create-account.php" method="POST" enctype="multipart/form-data">
         <input type="text" placeholder="login" name="login" required>
         <input type="password" placeholder="senha" name="senha" required>
-        <input type="submit">
+        <input type="submit" value="Cadastrar">
     </form>
 </body>
 </html>

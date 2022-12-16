@@ -6,8 +6,9 @@
     public function throwsErrorCreation(){
         $this->fetch = mysqli_query(Process_account::connect(),"SELECT * FROM cadastro");
         while($register = mysqli_fetch_assoc($this->fetch)){
-            if( $register["login"] == $_POST["login"]&& $register["senha"] == $_POST["senha"] || $register["login"] == $_POST["login"] || $register["senha"] == $_POST["senha"])
-            throw new Exception("Error, usuário e senha já existem");
+            if( $register["login"] == $_POST["login"]){
+                throw new Exception("Error, usuário já existe, por favor insira um novo usuário");
+            }
     }
     
     if(empty($_POST["login"]) && empty($_POST["senha"])){

@@ -11,7 +11,6 @@ session_start();
         }        
     }
     $teste = new UpdateAccount();
-
     $teste->teste();
     session_destroy();
 ?>
