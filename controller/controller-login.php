@@ -9,13 +9,13 @@ class Process_login extends Connect_db {
         while($register = mysqli_fetch_assoc($this->fetch)){
             while($register["login"] == $_POST["login"] && $register["senha"] == $_POST["senha"]){
              $_SESSION['login']= $_POST["login"];
-                return header("Location:../view/login-sucess.php");
+             $_SESSION['id']= $register["id_usuario"];
+                return header("Location:../view/view-user-area.php");
                 break;
             }
-            
+       
        }
        return header("Location:../view/view-login-error.php");
-
    }
 }
 $login = new Process_login();

@@ -12,5 +12,8 @@
         <input type="password" placeholder="senha" name="senha" required>
         <input type="submit" value="Logar">
     </form>
+    <div>
+        <a href="view-sign-up.php" title="Cadastre-se">Cadastre-se</a>
+    </div>
 </body>
 </html>

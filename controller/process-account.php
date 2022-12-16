@@ -3,16 +3,18 @@
     class Process_account extends Connect_db {
     public $fetch;
     //Validate errors of equals login and password and empty input
-    public function throwsErrorCreation(){
+    public function throwsErrorCreation($login,$senha,$repete_senha){
         $this->fetch = mysqli_query(Process_account::connect(),"SELECT * FROM cadastro");
         while($register = mysqli_fetch_assoc($this->fetch)){
-            if( $register["login"] == $_POST["login"]){
-                throw new Exception("Error, usuário já existe, por favor insira um novo usuário");
+            if( $register["login"] == $login){
+                throw new Exception("Error, Senha e repete senha não são iguais");
+            }            
+            if(!$senha == $repete_senha){
+                throw new Exception("Error, Senha e repete senha não são iguais");
             }
-    }
-    
-    if(empty($_POST["login"]) && empty($_POST["senha"])){
-         throw new Exception("Error, o cadastro não pode possuir o valor vazio, por favor preencha corretamente");
+            if(empty($login) && empty($senha) && empty($repete_senha)){
+                throw new Exception("Error, o cadastro não pode possuir o valor vazio, por favor preencha corretamente");
+            }
     }
     }
     }

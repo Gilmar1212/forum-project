@@ -1,1 +1,4 @@
-<?="<h2>Usuário inexistente</h2>"?>
+<script>
+    alert('Error, Usuário e senha ou não existe ou incorreto');
+    window.location.href='index.php';
+</script>;
