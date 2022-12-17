@@ -11,7 +11,7 @@ session_start();?>
 <body>
 <h2>Bem vindo <?=$_SESSION['login']?></h2>
 <form action="../controller/controller-update.php" method="POST">
-        <input type="password" name="update-pass" placeholder="Senha">
+        <input type="password" name="update-pass" placeholder="Nova Senha">
         <input type="submit" value="Modificar">
 </form>
 </body>
