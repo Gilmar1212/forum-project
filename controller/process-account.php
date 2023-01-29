@@ -14,7 +14,16 @@
     }
     if(empty($login) && empty($senha) && empty($repete_senha)){
         throw new Exception("Error, o cadastro não pode possuir o valor vazio, por favor preencha corretamente");
-            }       
+    }       
+    if( $register["login"] == $login){
+        echo "Error, Login já existe";
+    }            
+    if($senha !== $repete_senha){
+        echo "Error, Senha e repete senha não são iguais";
+    }
+    if(empty($login) && empty($senha) && empty($repete_senha)){
+        echo "Error, o cadastro não pode possuir o valor vazio, por favor preencha corretamente";
+    }       
     }
     }
     }
