@@ -10,7 +10,7 @@
     <form action="../model/model-crud-account/model-create-account.php" method="POST" enctype="multipart/form-data">
         <input type="text" placeholder="login" name="login" required>
         <input type="password" placeholder="senha" name="senha" required>
-        <input type="password" placeholder="Repita a senha" name="repita-senha" required>
+        <input type="password" placeholder="Confirmar senha" name="confirmar-senha" required>
         <input type="submit" value="Cadastrar">
     </form>
 </body>

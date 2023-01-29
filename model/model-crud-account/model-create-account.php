@@ -19,9 +19,9 @@
     }
    
     $validate = new Process_account();
-    $validate->throwsErrorCreation($_POST['login'],$_POST['senha'],$_POST['repita-senha']);
+    $validate->throwsErrorCreation($_POST['login'],$_POST['senha'],$_POST['confirmar-senha']);
 
     $create = new createAccount();
-    $create->Create($_POST['login'],$_POST['senha'],$_POST['repita-senha']);
+    $create->Create($_POST['login'],$_POST['senha'],$_POST['confirmar-senha']);
   
 ?>
