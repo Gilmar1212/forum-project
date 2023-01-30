@@ -1,5 +1,6 @@
 <?php
-ini_set('display_errors', 1);
+    //display erros test
+    ini_set('display_errors', 0);
     include("../../connection/connect-db.php");
     class Process_account extends Connect_db {
     public $fetch;
@@ -9,11 +10,11 @@ ini_set('display_errors', 1);
         while($register = mysqli_fetch_assoc($this->fetch)){
     if(ini_set('display_errors', 1)){
         if( $register["login"] == $login){
-            echo "Error, Login já existe";
+            echo "Error, Login já existe ou Senha e confirma senha não são iguais";
             break;
         }            
         if($senha !== $repete_senha){
-            echo "Error, Senha e repete senha não são iguais";
+            echo "Error, Senha e confirma senha não são iguais";
             break;
         }
         if(empty($login) && empty($senha) && empty($repete_senha)){
