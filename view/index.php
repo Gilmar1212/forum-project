@@ -15,5 +15,7 @@
     <div>
         <a href="view-sign-up.php" title="Cadastre-se">Cadastre-se</a>
     </div>
+    <?php include("view-send-topic.php");?>
+    <?php include("view-return-topics.php");?>
 </body>
 </html>

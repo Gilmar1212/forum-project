@@ -13,12 +13,5 @@
         <input type="password" placeholder="Confirmar senha" name="confirmar-senha" required>
         <input type="submit" value="Cadastrar">
     </form>
-    <form action="../model/model-crud-topics/model-create-topics.php" method="post" enctype="multipart/form-data">
-        <input type="text" name="topic-name">
-        <input type="text" name="topic-ranking">
-        <input type="text" name="answer-topic">
-        <input type="submit">
-    </form> 
-
 </body>
 </html>
