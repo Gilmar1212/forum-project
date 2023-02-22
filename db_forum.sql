@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 17-Dez-2022 às 02:33
+-- Tempo de geração: 22-Fev-2023 às 01:03
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -33,15 +33,15 @@ CREATE TABLE IF NOT EXISTS `cadastro` (
   `login` varchar(999) DEFAULT NULL,
   `senha` varchar(999) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `cadastro`
 --
 
 INSERT INTO `cadastro` (`id_usuario`, `login`, `senha`) VALUES
-(18, 'cuca', 'dafamiliabeludo'),
-(17, 'Gilmar', '456123');
+(39, 'Gilmar2', '123'),
+(38, 'Gilmar', '123456');
 
 -- --------------------------------------------------------
 
@@ -69,8 +69,21 @@ CREATE TABLE IF NOT EXISTS `topicos` (
   `nome_topico` varchar(999) NOT NULL,
   `respostas_topico` varchar(999) NOT NULL,
   `ranking_topico` int(11) NOT NULL,
-  PRIMARY KEY (`id_topico`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `id_categoria` int(11) NOT NULL,
+  PRIMARY KEY (`id_topico`),
+  KEY `fk_categoria` (`id_categoria`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `topicos`
+--
+
+INSERT INTO `topicos` (`id_topico`, `nome_topico`, `respostas_topico`, `ranking_topico`, `id_categoria`) VALUES
+(1, 'asdasd', 'asdasd', 123, 0),
+(2, 'asdasd', 'asdasd', 123, 0),
+(3, 'asdasd', 'asdasd', 123, 0),
+(4, 'sdsdaasd', 'asdasd', 1, 0),
+(5, 'teste', 'teste', 2, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

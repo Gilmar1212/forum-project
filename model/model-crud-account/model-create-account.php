@@ -1,6 +1,5 @@
 <?php
-  
-   include_once("../../controller/process-account.php");
+   include_once("../../controller/controller-process-account.php");
    include_once("../../connection/connect-db.php");
     class createAccount extends Connect_db{
         private $login;
@@ -13,7 +12,7 @@
              if($repeteSenha == $senha){
                 $insert = "INSERT INTO cadastro (`login`,`senha`) VALUES ('".$login."','".$senha."')";
                     mysqli_query(createAccount::connect(), $insert);
-                    echo"<script>alert('Cadastro realizado com sucesso');window.location.href='../../view/index.php'</script>";
+                    echo"<script>alert('Cadastro realizado com sucesso');window.location.href='../../index.php'</script>";
              }            
             }    
     }
