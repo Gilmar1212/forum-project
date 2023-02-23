@@ -1,14 +1,14 @@
 <?php
     
     include_once("../../connection/connect-db.php");
-
-    class createPosts extends Connect_db{
+    include_once("../../interfaces/super-interface.php");
+    class createPosts extends Connect_db implements iCreate{
         private $query;
         private $post_name;
         private $post_ranking;
         private $answers_posts;
         private $associate_post_categories;
-        public function InsertTable(){
+        public function Create(){
             $query = $this->query;
             $post_name = $this->post_name;
             $post_ranking = $this->post_ranking;

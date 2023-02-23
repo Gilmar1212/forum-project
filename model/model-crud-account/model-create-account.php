@@ -5,7 +5,7 @@
         private $login;
         private $senha;
         private $repeteSenha;
-        public function Create(String $login, String $senha, String $repeteSenha){            
+        public function Sign_up(String $login, String $senha, String $repeteSenha){            
             $this->login = $login;
             $this->senha = $senha;
             $this->repeteSenha = $repeteSenha;
@@ -21,6 +21,6 @@
     $validate->throwsErrorCreation($_POST['login'],$_POST['senha'],$_POST['confirmar-senha']);
 
     $create = new createAccount();
-    $create->Create($_POST['login'],$_POST['senha'],$_POST['confirmar-senha']);
+    $create->Sign_up($_POST['login'],$_POST['senha'],$_POST['confirmar-senha']);
   
 ?>

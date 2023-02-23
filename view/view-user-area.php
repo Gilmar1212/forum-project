@@ -14,5 +14,6 @@ session_start();?>
         <input type="password" name="update-pass" placeholder="Nova Senha">
         <input type="submit" value="Modificar">
 </form>
+<?php include_once("../model/model-crud-account/model-delete-account.php");?>
 </body>
 </html>

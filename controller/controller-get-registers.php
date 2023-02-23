@@ -1,7 +1,6 @@
 <?php   include_once("connection/connect-db.php");
-        include_once("interfaces/super-interfaces.php");
 
-    class returnRegisters implements getRegisters{
+    class returnRegisters{
         private $ocurrence_query;
         public function getRegister(){
            $connect = new Connect_db();
